@@ -14,6 +14,14 @@ function onClickButton(el) {
     el.style.color = "#4b0082";
 }
 
-function userCalculate(a) {
-    prompt("Enter any two numbers: ");
+function userCalculate(a, b) {
+    let a = +prompt("Enter first number: ");
+    let b = +prompt("Enter second number: ");
+    let c = a + b;
+    let sum = +prompt("Enter sum of those two numbers: ");
+    if (c == sum) {
+        alert("Congratulations! You're absolutely right :)")
+    } else {
+        alert("Nope. You've made a mistake. Please try again to count another numbers")
+    }
 }
