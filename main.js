@@ -7,8 +7,12 @@ title_2.style.color = "#E75480";
 var body = document.getElementById('body');
 body.style.backgroundColor = "#FFC0CB";
 
-var whattheysaid = confirm("Красиво?");
-console.log(whattheysaid);
+setTimeout(whattheysaid, 5000);
+
+function whattheysaid() {
+    confirm("Красиво?");
+    console.log(whattheysaid);
+}
 
 var counter_button = 0;
 
