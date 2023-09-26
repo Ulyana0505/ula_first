@@ -14,7 +14,7 @@ function onClickButton(el) {
     el.style.color = "#4b0082";
 }
 
-function userCalculate(a, b) {
+function userCalculate() {
     let a = +prompt("Enter first number: ");
     let b = +prompt("Enter second number: ");
     let c = a + b;
