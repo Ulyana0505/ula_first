@@ -74,3 +74,28 @@ function clearInput() {
     input.value = '';
 }
 // this par of code for a user list ended
+
+// below starts the part of code for messages
+const message_button = document.querySelector('.message-button');
+
+message_button.addEventListener('click', clickMessage);
+
+const messageEl = document.createElement('p');
+
+function clickMessage() {
+    const mes = prompt('Enter a messege');
+
+    messageEl.innerText = mes;
+
+   const messageBox = document.querySelector('.messages');
+   messageBox.append(messageEl);
+}
+
+const remove_button = document.querySelector('.remove-button');
+
+remove_button.addEventListener('click', removeMessage);
+
+function removeMessage() {
+   messageEl.remove();
+}
+// the part for messages ended
