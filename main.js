@@ -25,3 +25,25 @@ function userCalculate() {
         alert("Nope. You've made a mistake. Please try again to count another numbers")
     }
 }
+
+const hiding_button = document.querySelector('.hiding-button');
+
+hiding_button.addEventListener('click', hideText);
+
+function hideText() {
+    const text = document.querySelector('.text-for-hiding');
+    text.hidden = true;
+
+    const hiding_button = document.querySelector('.hiding-button');
+    hiding_button.removeEventListener('click', hideText);
+    hiding_button.addEventListener('click', showText);
+}
+
+function showText() {
+    const text = document.querySelector('.text-for-hiding');
+    text.hidden = false;
+
+    const hiding_button = document.querySelector('.hiding-button');
+    hiding_button.removeEventListener('click', showText);
+    hiding_button.addEventListener('click', hideText);
+}
