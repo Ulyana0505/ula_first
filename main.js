@@ -25,7 +25,7 @@ function userCalculate() {
         alert("Nope. You've made a mistake. Please try again to count another numbers")
     }
 }
-
+// below is code for hiding-not-hiding text
 const hiding_button = document.querySelector('.hiding-button');
 
 hiding_button.addEventListener('click', hideText);
@@ -47,3 +47,30 @@ function showText() {
     hiding_button.removeEventListener('click', showText);
     hiding_button.addEventListener('click', hideText);
 }
+// this part of code for hiding-not-hiding text has ended
+
+// below is code for a user list
+function buttonClick() {
+    const text = getInputText();
+    addElementToList(text);
+    clearInput();
+}
+
+function getInputText() {
+    const input = document.querySelector('.text-field');
+    return input.value;
+}
+
+function addElementToList(text) {
+    const listItem = document.createElement('li');
+    listItem.innerText = text;
+
+    const list = document.querySelector('.user-list');
+    list.append(listItem);
+}
+
+function clearInput() {
+    const input = document.querySelector('.text-field');
+    input.value = '';
+}
+// this par of code for a user list ended
