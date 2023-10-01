@@ -134,3 +134,20 @@ function newTitle() {
     newTitle.innerText = inputNewTitle;
 }
 // end of new title
+
+//hours from certaon date
+function buttonHours() {
+    const input = prompt('Enter a date in thos format: DD MM YYYY (like 18 08 2008)');
+    const [day, month, year] = input.split(' ');
+
+    const inputDate = new Date(`${year}-${month}-${day}`);
+
+    let diff =  Date.now() - inputDate;
+
+    diff = diff / 1000 / 60 / 60;
+
+    const hours = document.querySelector('#hours');
+
+    hours.innerHTML = diff.toFixed(0) + ' ' + 'hours';
+}
+// end
