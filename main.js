@@ -99,3 +99,32 @@ function removeMessage() {
    messageEl.remove();
 }
 // the part for messages ended
+
+//buton with seconds
+
+function addSecondsToList(text) {
+    const listItem = document.createElement('li');
+    listItem.innerText = text;
+
+    const list = document.querySelector('.seconds');
+    list.append(listItem);
+}
+
+function buttonSeconds() {
+    const now = new Date();
+
+    const secInDay = 24 * 60 * 60;
+
+    const hrs = now.getHours();
+    const min = now.getMinutes();
+    const sec = now.getSeconds();
+
+    const secPass = (hrs * 3600)+(min * 60)+sec;
+
+    const secUntilTomorrow = (secInDay - secPass) + ' ' + 'seconds';
+
+    addSecondsToList(secUntilTomorrow);
+
+    // console.log(secUntilTomorrow);
+
+}
