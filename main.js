@@ -101,7 +101,6 @@ function removeMessage() {
 // the part for messages ended
 
 //buton with seconds
-
 function addSecondsToList(text) {
     const listItem = document.createElement('li');
     listItem.innerText = text;
@@ -124,7 +123,14 @@ function buttonSeconds() {
     const secUntilTomorrow = (secInDay - secPass) + ' ' + 'seconds';
 
     addSecondsToList(secUntilTomorrow);
-
-    // console.log(secUntilTomorrow);
-
 }
+// button with seeconds end
+
+//new title (as user want)
+function newTitle() {
+    const inputNewTitle = prompt('Enter a few words');
+    const newTitle = document.querySelector('#title');
+
+    newTitle.innerText = inputNewTitle;
+}
+// end of new title
